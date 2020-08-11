@@ -8,3 +8,14 @@ description: The second post is the least memorable.
 ### h3
 
 Normal text
+
+![Cat](images/cat.jpg)
+
+```jsx
+
+import React from "react";
+
+const CoolComponent = () => <div>I'm a cool component!!</div>;
+
+export default CoolComponent;
+```
