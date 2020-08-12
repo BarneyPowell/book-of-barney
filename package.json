@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out"
   },
   "author": "Barney Powell <barneyp@gmail.com>",
   "license": "ISC",
@@ -18,7 +21,8 @@
     "next-optimized-images": "^2.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-syntax-highlighter": "^13.3.1"
+    "react-syntax-highlighter": "^13.3.1",
+    "serve": "^11.3.2"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
