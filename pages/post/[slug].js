@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import fs from "fs";
-import getPostFilename from '../../utils/posts/getPostFilename';
+import getPostFromSlug from '../../utils/posts/getPostFromSlug';
+import getPosts from '../../utils/posts/getPosts';
+
 import loadPostContent from "../../utils/posts/loadPostContent";
 import Layout from '../../components/_molecules/Layout';
 import Seo from '../../components/_molecules/Seo';
@@ -63,12 +64,13 @@ export default function Post({ content, frontmatter }) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("content/posts");
+  // const files = fs.readdirSync("content/posts");
 
-  const paths = files.map((filename) => ({
+  const posts = getPosts();
+  const paths = posts.map((post) => ({
     params: {
-      slug: filename.slice(11, filename.length - 3),
-    },
+      slug: post.slug
+    }
   }));
 
   return {
@@ -79,8 +81,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
 
-    const filename = getPostFilename(`${slug}`);
-    const props = loadPostContent(filename);
+    const post = getPostFromSlug(slug);
+    const props = loadPostContent(post.filename);
 
   return {
     props

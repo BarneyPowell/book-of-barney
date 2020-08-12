@@ -1,18 +1,16 @@
-import fs from "fs";
-import matter from "gray-matter";
+import getPosts from './getPosts';
 
-const getPostFilename = (slug) => {
+const getPostFilename = (postSlug) => {
 
     // Need to get a list of all the files
     // then parse the filename looking for the slug.
-    const files = fs.readdirSync(`${process.cwd()}/content/posts`);
+    const posts = getPosts();
 
     let foundFilename = '';
-    for (let x = 0; x < files.length; x ++) {
-        const filename = files[x];
-        const foundslug = filename.slice(11, filename.length - 3);
+    for (let x = 0; x < posts.length; x ++) {
+        let { filename, slug } = posts[x];
 
-        if (slug === foundslug) {
+        if (slug === postSlug) {
             foundFilename = filename;
             break;
         }
