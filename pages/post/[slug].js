@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import fs from "fs";
-import getPostFilename from '../../utils/getPostFilename';
-import loadPostContent from "../../utils/loadPostContent";
-import Layout from '../layout';
+import getPostFilename from '../../utils/posts/getPostFilename';
+import loadPostContent from "../../utils/posts/loadPostContent";
+import Layout from '../../components/_molecules/Layout';
+import Seo from '../../components/_molecules/Seo';
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
@@ -47,6 +48,7 @@ const Image = ({ alt, src }) => {
 export default function Post({ content, frontmatter }) {
   return (
     <Layout>
+        <Seo />
               <header>
           <h1 className="my-0">{frontmatter.title}</h1>
           <p className="text-xs">{frontmatter.date}</p>

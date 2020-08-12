@@ -1,12 +1,14 @@
 import fs from "fs";
-import Layout from './layout';
+import Layout from '../components/_molecules/Layout';
+import Seo from '../components/_molecules/Seo';
 import Link from "next/link";
-import loadPostContent from "../utils/loadPostContent";
+import loadPostContent from "../utils/posts/loadPostContent";
 
 
 export default function Home({ posts }) {
     return (
       <Layout>
+        <Seo />
         {posts.map(({ frontmatter: { title, description, date }, slug }) => (
           <article key={slug}>
             <header>

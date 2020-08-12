@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-export default (slug) => {
+const getPostFilename = (slug) => {
 
     // Need to get a list of all the files
     // then parse the filename looking for the slug.
@@ -25,3 +25,5 @@ export default (slug) => {
     return foundFilename;
 
 };
+
+export default getPostFilename;

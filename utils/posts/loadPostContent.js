@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-export default (filename) => {
+const loadPostContent = (filename) => {
 
     //TOOD Add validation on filename
 
@@ -30,3 +30,5 @@ export default (filename) => {
     };
 
 };
+
+export default loadPostContent;
