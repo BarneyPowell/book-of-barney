@@ -1,14 +1,25 @@
-import fs from "fs";
 import Layout from '../components/_molecules/Layout';
 import Seo from '../components/_molecules/Seo';
+import Section from '../components/_molecules/Section';
 import Link from "next/link";
 import loadPostContent from "../utils/posts/loadPostContent";
+import getPosts from '../utils/posts/getPosts';
+import fieldImageSrc from 'content/assets/images/field.jpg';
+import fieldImageLowSrc from 'content/assets/images/field.jpg?lqip';
 
 
 export default function Home({ posts }) {
     return (
       <Layout>
         <Seo />
+        <Section
+          backgroundImage={fieldImageSrc}
+          backgroundImageLow={fieldImageLowSrc}
+          />
+
+        <img src={fieldImageSrc} />
+
+
         {posts.map(({ frontmatter: { title, description, date }, slug }) => (
           <article key={slug}>
             <header>
@@ -31,23 +42,8 @@ export default function Home({ posts }) {
   }
 
 export async function getStaticProps() {
-    const files = fs.readdirSync(`${process.cwd()}/content/posts`);
-
-    const posts = files.map(loadPostContent);
-
-    // const posts = files.map((filename) => {
-    //   const markdownWithMetadata = fs
-    //     .readFileSync(`content/posts/${filename}`)
-    //     .toString();
-
-    //   const { data } = matter(markdownWithMetadata);
-
-    //   // Convert post date to format: Month day, Year
-
-
-
-    // });
-
+    const posts = getPosts().map((post) => loadPostContent(post.filename));
+    // const posts = files.map(loadPostContent);
 
     return {
       props: {
