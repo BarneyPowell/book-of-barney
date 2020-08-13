@@ -1,6 +1,6 @@
 import Layout from '../components/_molecules/Layout';
 import Seo from '../components/_molecules/Seo';
-import Section from '../components/_molecules/Section';
+import Cover from '../components/_molecules/Cover';
 import Link from "next/link";
 import loadPostContent from "../utils/posts/loadPostContent";
 import getPosts from '../utils/posts/getPosts';
@@ -12,7 +12,7 @@ export default function Home({ posts }) {
     return (
       <Layout>
         <Seo />
-        <Section
+        <Cover
           backgroundImage={fieldImageSrc}
           backgroundImageLow={fieldImageLowSrc}
           />

@@ -13,6 +13,7 @@
   "author": "Barney Powell <barneyp@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "lqip-loader": "^2.2.0",
