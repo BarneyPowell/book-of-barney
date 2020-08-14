@@ -3,9 +3,7 @@ export default function Home({ children }) {
     // max-w-screen-sm px-4 py-12 mx-auto antialiased font-body
     return (
         <div className="">
-        <header>
 
-        </header>
         <main>
             {children}
         </main>

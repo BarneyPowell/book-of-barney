@@ -8,9 +8,9 @@ import Seo from '../../components/_molecules/Seo';
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-const CodeBlock = ({ language, value }) => {
-  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
-};
+// const CodeBlock = ({ language, value }) => {
+//   return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
+// };
 
 const Image = ({ alt, src }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -54,17 +54,18 @@ export default function Post({ content, frontmatter }) {
           <h1 className="my-0">{frontmatter.title}</h1>
           <p className="text-xs">{frontmatter.date}</p>
         </header>
+        <div className="prose">
         <ReactMarkdown
           escapeHtml={false}
           source={content}
-          renderers={{ code: CodeBlock, image: Image }}
+          renderers={{ image: Image }}
         />
+        </div>
     </Layout>
   );
 }
 
 export async function getStaticPaths() {
-  // const files = fs.readdirSync("content/posts");
 
   const posts = getPosts();
   const paths = posts.map((post) => ({
@@ -72,8 +73,6 @@ export async function getStaticPaths() {
       slug: post.slug
     }
   }));
-
-  console.log(paths);
 
   return {
     paths,

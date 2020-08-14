@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
       <Html lang={siteMetadata.language}>
         <Head>
         </Head>
-        <body>
+        <body className="font-body">
           <Main />
           <NextScript />
         </body>

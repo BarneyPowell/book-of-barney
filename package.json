@@ -12,6 +12,10 @@
   },
   "author": "Barney Powell <barneyp@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarneyPowell/book-of-barney.git"
+  },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
     "imagemin-mozjpeg": "^9.0.0",
