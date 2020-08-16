@@ -25,6 +25,22 @@ const getTemplate = (pathname) => {
 
 
 
+import Home from './Home';
+import Post from './Post';
+
+const TemplateMap = {
+  'home': Home,
+  'post': Post
+};
+
+const getTemplate = (pathname) => {
+  const isRoot = pathname === "/";
+  return isRoot
+    ? Home
+    : TemplateMap[pathname.split('/')[1].toLowerCase()];
+}
+
+
 export default function Layout({ children }) {
   const { pathname } = useRouter();
   const [isMenuOpen, setMenuOpen] = useState(false);
