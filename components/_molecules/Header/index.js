@@ -7,7 +7,9 @@ export default function Header({ children, onMenuClick }) {
             zIndex: 1
         },
         header: {
-            zIndex: 2
+            zIndex: 2,
+            backdropFilter: 'brightness(3) blur(2px)',
+            WebkitBackdropFilter: 'brightness(3) blur(2px)'
         }
     };
 
@@ -15,12 +17,13 @@ export default function Header({ children, onMenuClick }) {
     return (
         <header
             style={styles.parent}
-            className="fixed top-0 left-0 w-screen text-white">
+            className="fixed top-0 left-0 w-screen">
 
-            <div style={styles.header} className="flex w-full justify-between p-2 relative">
+            <div style={styles.header}
+                className="flex w-full justify-between p-2 px-4 relative text-gray-900 font-display">
 
                 <Link href={"/"} as={`/`}>
-                    <a className="uppercase font-body"
+                    <a className="uppercase font-extrabold"
                         title="Back to homepage">
                             Barney Powell
                     </a>

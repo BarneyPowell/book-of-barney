@@ -4,6 +4,10 @@ import Menu from "@/molecules/Menu";
 import Home from './Home';
 import Post from './Post';
 import Header from '@/molecules/Header';
+import Main from '@/molecules/Main';
+
+
+import Footer from '@/molecules/Footer';
 import React, { useState } from 'react';
 
 const TemplateMap = {
@@ -30,20 +34,33 @@ export default function Layout({ children }) {
     setMenuOpen(!isMenuOpen);
   };
 
+  const styles = {
+    content: {
+      filter: 'brightness(1)',
+      transition: 'filter 0.5s ease-in-out'
+    }
+  }
 
   if (isMenuOpen) {
+    styles.content.filter = 'brightness(0.5)';
   }
 
 
   return (
     <>
-          <Header onMenuClick={handleMenuClick}>
-            <Menu isDisplayed={isMenuOpen} />
-          </Header>
+      <Header onMenuClick={handleMenuClick}>
+        <Menu isDisplayed={isMenuOpen} />
+      </Header>
 
-        <Template isMenuOpen={isMenuOpen}>
+      <Main isMenuOpen={isMenuOpen}>
+        <Template>
           {children}
         </Template>
+      </Main>
+
+      <Footer>
+
+      </Footer>
 
     </>
   );

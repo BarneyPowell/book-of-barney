@@ -17,9 +17,6 @@ export default function Home({ posts }) {
           backgroundImageLow={fieldImageLowSrc}
           />
 
-        <img src={fieldImageSrc} />
-
-
         {posts.map(({ frontmatter: { title, description, date }, slug }) => (
           <article key={slug}>
             <header>
@@ -43,8 +40,6 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
     const posts = getPosts().map((post) => loadPostContent(post.filename));
-    // const posts = files.map(loadPostContent);
-
     return {
       props: {
         posts,

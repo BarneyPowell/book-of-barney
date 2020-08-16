@@ -1,8 +1,7 @@
 
 const styles = {
     name: {
-        fontSize: '1.8em',
-        textTransform: 'none'
+        fontSize: '2.5em'
     },
     cover: {
         backgroundSize: 'cover',
@@ -13,8 +12,8 @@ const styles = {
         color: 'white'
     },
     heading: {
-        fontSize: '1.4em',
-        lineHeight: '1.2'
+        lineHeight: '1.1',
+        fontSize: '3.5vh'
     }
 };
 
@@ -31,12 +30,12 @@ export default function Cover({children, backgroundImage, backgroundImageLow}) {
             style={styles.cover}>
 
             <h1
-                className="text-center uppercase font-light"
+                className="text-center font-light font-display"
                 style={styles.heading}
             >
                 Hello! My name is
                     <span
-                        className="block font-normal font-display"
+                        className="block"
                         style={styles.name}>Barney</span>
             </h1>
 

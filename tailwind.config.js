@@ -2,8 +2,8 @@ module.exports = {
   purge: [],
   theme: {
     fontFamily: {
-      'display': ['"Patua One"', 'serif'],
-      'body': ['Lato', 'sans-serif'],
+      'display': ['Raleway', 'serif'],
+      'body': ['Lora', 'sans-serif'],
     },
     extend: {},
   },
