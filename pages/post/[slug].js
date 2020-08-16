@@ -19,7 +19,7 @@ export default function Post({ content, frontmatter }) {
   return (
     <Layout>
         <Seo />
-        <article style={styles.article} className="pt-10 mb-10 max-w-3xl w-screen">
+        <article style={styles.article} className="pt-10 md:mb-10 max-w-3xl w-screen">
           <header className="text-center bg-white font-display mb-px">
             <h1 className="text-3xl py-6">{frontmatter.title}</h1>
           </header>
