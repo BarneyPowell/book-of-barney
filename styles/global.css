@@ -1,3 +1,17 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* Medium (md) */
+@media (min-width: 768px) {
+
+    .max-h-16-9 {
+        max-height: 57vw;
+    }
+
+}
+
+.prose h2 {
+        font-family: 'Lato', serif;
+        font-weight: 400;
+}

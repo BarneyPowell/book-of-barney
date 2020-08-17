@@ -1,9 +1,9 @@
 ---
 title: The Sommelier
-description: A 1,000 words short story from the seed of a first line
+description: Douglas sighed to himself and muttered “That’s definitely the last time I trust a badger sommelier.
 ---
 
-**Douglas sighed to himself and muttered “That’s definitely the last time I trust a badger sommelier.”**
+## Douglas sighed to himself and muttered “That’s definitely the last time I trust a badger sommelier.”
 
 Which seemed a shame, he thought, as it had also been the first time. With hindsight, it seemed obvious that his expectations should have been lower; however his marinated var salmon with lemon and vodka jelly, prepared by the racoon chef de partie, had been delicious. It just didn’t pair well with the South Island Viognier that had been recommended.
 

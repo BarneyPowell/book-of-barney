@@ -1,12 +1,12 @@
 
-const styles = {
+let styles = {
     name: {
         fontSize: '2.5em'
     },
     cover: {
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
-        height: '100vh',
+        height: '90vh',
         width: '100vw',
         display: 'flex',
         color: 'white'
@@ -22,11 +22,16 @@ const styles = {
 
 export default function Cover({children, backgroundImage, backgroundImageLow}) {
 
-    styles.cover.backgroundImage = `url(${backgroundImage})`;
+    styles = { ...styles,
+        cover: {
+            ...styles.cover,
+            backgroundImage: `url(${backgroundImage})`
+        }
+    };
 
     return (
         <section
-            className="flex justify-center align-middle items-center"
+            className="flex justify-center align-middle items-center max-h-16-9"
             style={styles.cover}>
 
             <h1
@@ -36,7 +41,7 @@ export default function Cover({children, backgroundImage, backgroundImageLow}) {
                 Hello! My name is
                     <span
                         className="block"
-                        style={styles.name}>Barney</span>
+                        style={styles.name}>Barney.</span>
             </h1>
 
             {children}

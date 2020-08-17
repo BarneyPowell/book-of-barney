@@ -2,8 +2,8 @@ module.exports = {
   purge: [],
   theme: {
     fontFamily: {
-      'display': ['Raleway', 'serif'],
-      'body': ['Lora', 'sans-serif'],
+      'display': ['Lato', 'sans-serif'],
+      'body': ['Lora', 'serif'],
     },
     extend: {},
   },
