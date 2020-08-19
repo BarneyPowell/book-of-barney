@@ -7,8 +7,17 @@ import Layout from '../../components/_molecules/Layout';
 import Seo from '../../components/_molecules/Seo';
 
 import Markdown from '@/molecules/Markdown';
+import ParsedDate from '@/atoms/ParsedDate';
 
 export default function Post({ content, frontmatter }) {
+
+  const dateProps = {
+    date: frontmatter.date,
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
 
   const styles = {
     article: {
@@ -23,8 +32,10 @@ export default function Post({ content, frontmatter }) {
           <header className="text-center bg-white font-display mb-px">
             <h1 className="text-3xl py-6">{frontmatter.title}</h1>
           </header>
-          <section className="bg-white mb-px text-center p-2">
-            <p className="text-xs m-0">{frontmatter.date}</p>
+          <section className="bg-white mb-px text-center p-2 text-xs font-display">
+            <ul>
+              <li><ParsedDate {...dateProps} /></li>
+            </ul>
           </section>
           <section className="p-4 bg-white prose max-w-none mb-px">
             <Markdown>{content}</Markdown>
