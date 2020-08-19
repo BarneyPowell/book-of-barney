@@ -6,7 +6,6 @@ import Post from './Post';
 import Header from '@/molecules/Header';
 import Main from '@/molecules/Main';
 
-
 import Footer from '@/molecules/Footer';
 import React, { useState } from 'react';
 
@@ -21,25 +20,6 @@ const getTemplate = (pathname) => {
     ? Home
     : TemplateMap[pathname.split('/')[1].toLowerCase()];
 }
-
-
-
-
-import Home from './Home';
-import Post from './Post';
-
-const TemplateMap = {
-  'home': Home,
-  'post': Post
-};
-
-const getTemplate = (pathname) => {
-  const isRoot = pathname === "/";
-  return isRoot
-    ? Home
-    : TemplateMap[pathname.split('/')[1].toLowerCase()];
-}
-
 
 export default function Layout({ children }) {
   const { pathname } = useRouter();
