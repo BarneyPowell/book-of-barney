@@ -2,6 +2,7 @@
     "compilerOptions": {
       "baseUrl": ".",
       "paths": {
+        "@/atoms/*": ["components/_atoms/*"],
         "@/molecules/*": ["components/_molecules/*"],
         "@/content/*": ["content/*"]
       }
