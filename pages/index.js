@@ -11,7 +11,7 @@ import ArticleList from '@/molecules/ArticleList';
 export default function Home({ posts }) {
     return (
       <Layout>
-        <Seo />
+        <Seo title='Barney Powell' />
         <Cover
           backgroundImage={fieldImageSrc}
           backgroundImageLow={fieldImageLowSrc}

@@ -14,18 +14,18 @@ export default function ArticleCard({ frontmatter: { title, description, date },
     return (
         <article className="m-2 bg-white font-display">
               <header>
-                <h3 className="px-2 m-0 ">
+                <h3 className="p-4 pb-0 ">
                   <Link href={"/post/[slug]"} as={`/post/${slug}`}>
                     <a className="text-2xl text-orange-500 no-underline">
                       {title}
                     </a>
                   </Link>
                 </h3>
-                <div className="px-2 text-xs flex">
-                  <span className="mx-1 text-gray-600"><ParsedDate {...dateProps} /></span>
+                <div className="px-4 mb-1 text-xs flex">
+                  <span className="text-gray-600"><ParsedDate {...dateProps} /></span>
                 </div>
               </header>
-              <section className="p-2">
+              <section className="p-4 pt-0">
                 <p className="m-0 text-sm">{description}</p>
               </section>
             </article>
