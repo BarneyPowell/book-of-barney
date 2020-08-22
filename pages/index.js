@@ -18,7 +18,7 @@ export default function Home({ posts }) {
           />
 
         <section className="font-display py-10 px-8 flex justify-evenly flex-col md:flex-row  items-center flex-wrap">
-          <p className="text-center text-xl font-light uppercase mb-4 md:text-3xl lg:text-4xl lg:my-12 lg:w-full flex-shrink-0">
+          <p className="text-center text-xl font-light uppercase mb-4 md:text-3xl lg:text-4xl lg:my-12 lg:w-full flex-shrink-0 md:flex-shrink">
             I'm an <span className="font-normal">Engineering Manager</span> with a speciality in leading Front-end engineering teams.
           </p>
           <p className="text-center  mb-4 text-sm text-gray-700 md:text-xl lg:m-3 lg:w-1/3  flex-shrink">
