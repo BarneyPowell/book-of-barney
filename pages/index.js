@@ -37,8 +37,9 @@ export default function Home({ posts }) {
           </p>
         </section>
 
-        <ArticleCardList articles={posts} />
-
+        <section className="px-4">
+          <ArticleCardList articles={posts} />
+        </section>
       </Layout>
     );
   }
