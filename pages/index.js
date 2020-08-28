@@ -1,16 +1,20 @@
-import Layout from '../components/_molecules/Layout';
-import Seo from '../components/_molecules/Seo';
-import Cover from '../components/_molecules/Cover';
+import orderBy from 'lodash/orderBy';
+import take from 'lodash/take';
+
+import Layout from '@/molecules/Layout';
+import Seo from '@/molecules/Seo';
+import Cover from '@/molecules/Cover';
 import loadPostContent from "../utils/posts/loadPostContent";
 import getPosts from '../utils/posts/getPosts';
 import fieldImageSrc from 'content/assets/images/field.jpg';
 import fieldImageLowSrc from 'content/assets/images/field.jpg?lqip';
-import ArticleList from '@/molecules/ArticleList';
+import ArticleCardList from '@/molecules/ArticleCardList';
 
+const MAX_POSTS = 6;
 
 export default function Home({ posts }) {
     return (
-      <Layout>
+      <Layout template='home'>
         <Seo title='Barney Powell' />
         <Cover
           backgroundImage={fieldImageSrc}
@@ -33,14 +37,16 @@ export default function Home({ posts }) {
           </p>
         </section>
 
-        <ArticleList articles={posts} />
-
+        <section className="px-4">
+          <ArticleCardList articles={posts} />
+        </section>
       </Layout>
     );
   }
 
 export async function getStaticProps() {
-    const posts = getPosts().map((post) => loadPostContent(post.filename));
+    const posts = take(orderBy(getPosts(), ['date'], ['desc']), MAX_POSTS)
+      .map((post) => loadPostContent(post.filename));
     return {
       props: {
         posts,
