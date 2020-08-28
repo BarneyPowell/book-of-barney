@@ -26,7 +26,7 @@ export default function Blog({ content, frontmatter }) {
           </header>
           <section className="bg-white mb-px text-center p-2 text-xs font-display">
             <ul>
-              <li>{formatDate(frontmatter.date.full)}</li>
+              <li>{frontmatter.date.full}</li>
             </ul>
           </section>
           <section className="p-4 bg-white prose max-w-none mb-px">
