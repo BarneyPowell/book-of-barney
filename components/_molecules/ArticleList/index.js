@@ -4,16 +4,16 @@ import keys from 'lodash/keys';
 
 import ArticleCardList from '@/molecules/ArticleCardList';
 
-const renderYearGroup = (year, articles) => {
+const renderYearGroup = (year, articles, isMinimal) => {
     return (
         <section key={year}>
             <h3 className="font-display">{year}</h3>
-            <ArticleCardList articles={articles} />
+            <ArticleCardList articles={articles} isMinimal={isMinimal} />
         </section>
     );
 }
 
-export default function ArticleList({ articles }) {
+export default function ArticleList({ articles, showCardFooter, showCardDescription }) {
 
     const articlesByYear = groupBy(articles, (article) => {
         const year = article.frontmatter.date.year;
@@ -24,9 +24,13 @@ export default function ArticleList({ articles }) {
     years.sort();
     years.reverse();
 
-    return (
-        <section className="p-4">
-            {years.map((year) => renderYearGroup(year, articlesByYear[year]))}
-        </section>
-    );
+    return years.map((year) => (
+                <section key={year}>
+                <h3 className="font-display border-b mb-2 text-lg text-gray-600">{year}</h3>
+                <ArticleCardList
+                    articles={articlesByYear[year]}
+                    showCardDescription={showCardDescription}
+                    showCardFooter={showCardFooter} />
+                </section>
+    ));
 }

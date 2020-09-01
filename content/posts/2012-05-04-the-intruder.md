@@ -1,6 +1,7 @@
 ---
 title: The Intruder
 description: She sat and stared. Hours passed before she moved. As she stood up and approached the 13 inch dildo she knew it was now or never.
+tags: 1000 Words
 ---
 
 ## She sat and stared. Hours passed before she moved. As she stood up and approached the 13 inch dildo she knew it was now or never

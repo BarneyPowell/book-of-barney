@@ -1,25 +1,45 @@
 import Link from 'next/link';
+import SimpleTagList from '@/molecules/SimpleTagList';
+import LinkButton from '@/molecules/LinkButton';
 
+export default function ArticleCard({ showDescription = true, showFooter = true, frontmatter: { title, description, date, tags }, slug }) {
 
-export default function ArticleCard({ frontmatter: { title, description, date }, slug }) {
+    const primaryTag = tags[0];
+
+    const articleHref = '/blog/[slug]';
+    const articleUrl = `/blog/${slug}`;
 
     return (
-        <article className="mb-4 bg-white font-display rounded">
-              <header>
-                <h3 className="p-4 pb-0 ">
-                  <Link href={"/blog/[slug]"} as={`/blog/${slug}`}>
+        <article className="mb-4 pb-3 bg-white font-display rounded">
+              <header className="p-4 pb-0 leading-6">
+                <h3 className="p-0 leading-6">
+                  <Link href={articleHref} as={articleUrl}>
                     <a className="text-2xl text-orange-500 no-underline">
                       {title}
                     </a>
                   </Link>
                 </h3>
-                <div className="px-4 mb-1 text-xs flex">
-                  <span className="text-gray-600">{date.distance}</span>
+                <div className="text-xs flex text-gray-600">
+                  <span className=''>
+                    <Link href='/blog/tags/[tag]' as={`/blog/tags/${primaryTag.slug}`}>
+                      <a>{primaryTag.name}</a>
+                    </Link>
+                  </span>
+                  <span className='mx-1'>&middot;</span>
+                  <span className="">{date.distance}</span>
                 </div>
               </header>
-              <section className="p-4 pt-0">
-                <p className="m-0 text-sm">{description}</p>
-              </section>
+              {showDescription && (
+                <section className="p-4 py-0 pb-3">
+                  <p className="m-0 text-sm mb-2">{description}</p>
+                  <LinkButton href={articleHref} as={articleUrl}>Read more</LinkButton>
+                </section>
+              )}
+              {showFooter && (
+              <footer className="m-4 my-0 pt-3 border-t">
+                <SimpleTagList tags={tags} />
+              </footer>
+              )}
             </article>
     );
 }

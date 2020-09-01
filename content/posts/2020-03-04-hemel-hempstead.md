@@ -1,6 +1,7 @@
 ---
 title: Hemel Hempstead
 description: The lemurs still hadn’t forgiven Nilroy for losing his bagpipes at last year’s lemur parade in Hemel Hempstead, hoping no one would notice that he had sewn together five ducks instead.
+tags: 1000 Words
 ---
 
 ## The lemurs still hadn’t forgiven Nilroy for losing his bagpipes at last year’s lemur parade in Hemel Hempstead, hoping no one would notice that he had sewn together five ducks instead

@@ -1,6 +1,7 @@
 ---
 title: The Armenian
 description: I went into the hut and waited for the Armenian.
+tags: 1000 Words
 ---
 
 ## I went into the hut and waited for the Armenian
