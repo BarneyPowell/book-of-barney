@@ -3,6 +3,7 @@ import React from "react";
 import Layout from '@/molecules/Layout';
 import Markdown from '@/molecules/Markdown';
 import Seo from '@/molecules/Seo';
+import SimpleTagList from '@/molecules/SimpleTagList';
 
 import getPostFromSlug from '../../utils/posts/getPostFromSlug';
 import getPosts from '../../utils/posts/getPosts';
@@ -25,9 +26,10 @@ export default function Blog({ content, frontmatter }) {
             <h1 className="text-3xl py-6">{frontmatter.title}</h1>
           </header>
           <section className="bg-white mb-px text-center p-2 text-xs font-display">
-            <ul>
+            <ul className="flex justify-center items-center">
               <li>{frontmatter.date.full}</li>
-              {frontmatter.tags.map((tag) => <li>{tag.name}</li>)}
+              <li className='mx-1'>&middot;</li>
+              <li><SimpleTagList tags={frontmatter.tags} /></li>
             </ul>
           </section>
           <section className="p-4 bg-white prose max-w-none mb-px">
