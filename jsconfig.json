@@ -4,7 +4,9 @@
       "paths": {
         "@/atoms/*": ["components/_atoms/*"],
         "@/molecules/*": ["components/_molecules/*"],
-        "@/content/*": ["content/*"]
+        "@/content/*": ["content/*"],
+        "@/utils/*": ["utils/*"]
       }
-    }
+    },
+    "exclude": ["node_modules", ".next", "out"]
   }

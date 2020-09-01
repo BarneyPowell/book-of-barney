@@ -10,7 +10,7 @@ export default function PrimaryNavigation() {
                     </Link>
                 </li>
                 <li>
-                    <Link href={"/"} as={`/`}>
+                    <Link href={"/blog"} as={`/blog`}>
                         <a title="Blog posts">Blog</a>
                     </Link>
                 </li>

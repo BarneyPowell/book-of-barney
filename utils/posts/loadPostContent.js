@@ -1,5 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
+import getCustomDate from '@/utils/helpers/getCustomDate';
+import getSafeTagSlug from '@/utils/helpers/getSafeTagSlug';
 
 const loadPostContent = (filename) => {
 
@@ -12,14 +14,22 @@ const loadPostContent = (filename) => {
     const { data, content } = matter(markdownWithMetadata);
 
     // split the filename to get the date.
-    const date = filename.slice(0, 10);
+    const dateString = filename.slice(0, 10);
     const slug = filename.slice(11, filename.length - 3);
 
-    //const options = { year: "numeric", month: "long", day: "numeric" };
-    //const formattedDate = data.date.toLocaleDateString("en-GB", options);
+    const date = getCustomDate(dateString);
+
+    const tags = data.tags.split(',').map((tag) => {
+        return {
+            name: tag,
+            slug: getSafeTagSlug(tag)
+        }
+    });
 
     const frontmatter = {
-        ...data,
+        title: data.title,
+        description: data.description,
+        tags,
         date,
     };
 

@@ -1,6 +1,7 @@
 ---
 title: The Chicken & The Avocado
 description: This was it. The life-defining decision one cautiously hopes for. For me it was a choice between an avocado and a chicken.
+tags: 1000 Words
 ---
 
 ## This was it. The life-defining decision one cautiously hopes for. For me it was a choice between an avocado and a chicken

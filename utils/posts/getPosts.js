@@ -17,7 +17,6 @@ const getPosts = () => {
     });
 
     return posts;
-
 };
 
 export default getPosts;

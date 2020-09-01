@@ -1,6 +1,7 @@
 ---
 title: The Vision & The Chaos
 description: The dream had left him breathless and terrified.
+tags: 1000 Words
 ---
 
 ## The dream had left him breathless and terrified. There was no other way to describe it but as a prophecy, given to him by the only girl who had ever loved him, which he knew was impossible

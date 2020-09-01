@@ -1,39 +1,33 @@
 import React from "react";
+
+import Layout from '@/molecules/Layout';
+import Markdown from '@/molecules/Markdown';
+import Seo from '@/molecules/Seo';
+
 import getPostFromSlug from '../../utils/posts/getPostFromSlug';
 import getPosts from '../../utils/posts/getPosts';
-
 import loadPostContent from "../../utils/posts/loadPostContent";
-import Layout from '../../components/_molecules/Layout';
-import Seo from '../../components/_molecules/Seo';
 
-import Markdown from '@/molecules/Markdown';
 
-import { format, parseISO } from 'date-fns';
-
-const formatDate = (dateString) => {
-  const date = parseISO(dateString);
-  console.log('date:', date, dateString);
-  return format(date, 'eeee, do MMMM yyyy');
-}
-
-export default function Post({ content, frontmatter }) {
+export default function Blog({ content, frontmatter }) {
 
   const styles = {
     article: {
-      boxShadow: '0 0 10vw rgba(0,0,0,0.3)'
+      boxShadow: '0 0 1vw rgba(0,0,0,0.05)'
     }
   };
 
   return (
-    <Layout>
+    <Layout template='article'>
         <Seo title={`${frontmatter.title} | Barney Powell`} />
-        <article style={styles.article} className="pt-10 md:mb-10 max-w-3xl w-screen">
+        <article style={styles.article} className="md:mb-10 max-w-3xl w-screen">
           <header className="text-center bg-white font-display mb-px">
             <h1 className="text-3xl py-6">{frontmatter.title}</h1>
           </header>
           <section className="bg-white mb-px text-center p-2 text-xs font-display">
             <ul>
-              <li>{formatDate(frontmatter.date)}</li>
+              <li>{frontmatter.date.full}</li>
+              {frontmatter.tags.map((tag) => <li>{tag.name}</li>)}
             </ul>
           </section>
           <section className="p-4 bg-white prose max-w-none mb-px">
