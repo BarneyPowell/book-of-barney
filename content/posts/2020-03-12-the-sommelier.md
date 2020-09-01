@@ -1,6 +1,7 @@
 ---
 title: The Sommelier
 description: Douglas sighed to himself and muttered “That’s definitely the last time I trust a badger sommelier.
+tags: 1000 Words
 ---
 
 ## Douglas sighed to himself and muttered “That’s definitely the last time I trust a badger sommelier.”

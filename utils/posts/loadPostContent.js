@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import getCustomDate from '@/utils/helpers/getCustomDate';
+import getSafeTagSlug from '@/utils/helpers/getSafeTagSlug';
 
 const loadPostContent = (filename) => {
 
@@ -18,11 +19,17 @@ const loadPostContent = (filename) => {
 
     const date = getCustomDate(dateString);
 
-    //const options = { year: "numeric", month: "long", day: "numeric" };
-    //const formattedDate = data.date.toLocaleDateString("en-GB", options);
+    const tags = data.tags.split(',').map((tag) => {
+        return {
+            name: tag,
+            slug: getSafeTagSlug(tag)
+        }
+    });
 
     const frontmatter = {
-        ...data,
+        title: data.title,
+        description: data.description,
+        tags,
         date,
     };
 

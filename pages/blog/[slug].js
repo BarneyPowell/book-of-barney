@@ -20,13 +20,14 @@ export default function Blog({ content, frontmatter }) {
   return (
     <Layout template='article'>
         <Seo title={`${frontmatter.title} | Barney Powell`} />
-        <article style={styles.article} className="pt-10 md:mb-10 max-w-3xl w-screen">
+        <article style={styles.article} className="md:mb-10 max-w-3xl w-screen">
           <header className="text-center bg-white font-display mb-px">
             <h1 className="text-3xl py-6">{frontmatter.title}</h1>
           </header>
           <section className="bg-white mb-px text-center p-2 text-xs font-display">
             <ul>
               <li>{frontmatter.date.full}</li>
+              {frontmatter.tags.map((tag) => <li>{tag.name}</li>)}
             </ul>
           </section>
           <section className="p-4 bg-white prose max-w-none mb-px">
