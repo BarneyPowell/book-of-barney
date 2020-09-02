@@ -1,6 +1,7 @@
 ---
 title: The Armenian
-description: I went into the hut and waited for the Armenian.
+description: A 1,000 word (ish) short story from a seed sentence given to me by my friend Rob. The goal isn't to finish a story, but to start one, and see where it takes you.
+extract: I went into the hut and waited for the Armenian.
 tags: 1000 Words
 ---
 

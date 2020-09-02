@@ -1,6 +1,7 @@
 ---
 title: The Intruder
-description: She sat and stared. Hours passed before she moved. As she stood up and approached the 13 inch dildo she knew it was now or never.
+description: 1,000 words of a short story from a seed sentence given to me by my friend Sam.
+extract: She sat and stared. Hours passed before she moved. As she stood up and approached the 13 inch dildo she knew it was now or never.
 tags: 1000 Words
 ---
 

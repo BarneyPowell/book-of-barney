@@ -1,6 +1,7 @@
 ---
 title: The Chicken & The Avocado
-description: This was it. The life-defining decision one cautiously hopes for. For me it was a choice between an avocado and a chicken.
+description: A 1,000 word (ish) short story from a seed sentence. The goal isn't to finish a story, but to start one, and see where it takes you.
+extract: This was it. The life-defining decision one cautiously hopes for. For me it was a choice between an avocado and a chicken.
 tags: 1000 Words
 ---
 

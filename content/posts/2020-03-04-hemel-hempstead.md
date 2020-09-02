@@ -1,6 +1,7 @@
 ---
 title: Hemel Hempstead
-description: The lemurs still hadn’t forgiven Nilroy for losing his bagpipes at last year’s lemur parade in Hemel Hempstead, hoping no one would notice that he had sewn together five ducks instead.
+description: A 1,000 word (ish) short story from a seed sentence given by my friend Ian. The goal isn't to finish a story, but to start one, and see where it takes you.
+extract: The lemurs still hadn’t forgiven Nilroy for losing his bagpipes at last year’s lemur parade in Hemel Hempstead, hoping no one would notice that he had sewn together five ducks instead.
 tags: 1000 Words
 ---
 

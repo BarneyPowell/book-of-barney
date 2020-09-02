@@ -38,6 +38,9 @@ export default function Blog({ content, frontmatter }) {
           <section className="bg-white mb-px text-center p-2 text-xs font-display flex justify-center">
             <SimpleTagList tags={frontmatter.tags} />
           </section>
+          <section className="p-2 bg-white max-w-none prose">
+            <p className="font-display bg-gray-200 p-2 rounded"><span className="text-sm">{frontmatter.description}</span></p>
+          </section>
           <section className="p-4 bg-white prose max-w-none mb-px">
             <Markdown>{content}</Markdown>
           </section>

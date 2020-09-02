@@ -1,6 +1,7 @@
 ---
 title: The Sommelier
-description: Douglas sighed to himself and muttered “That’s definitely the last time I trust a badger sommelier.
+description: A 1,000 word (ish) short story from a seed sentence given by my friend Dave. The goal isn't to finish a story, but to start one, and see where it takes you.
+extract: Douglas sighed to himself and muttered “That’s definitely the last time I trust a badger sommelier.
 tags: 1000 Words
 ---
 

@@ -13,7 +13,7 @@ const renderYearGroup = (year, articles, isMinimal) => {
     );
 }
 
-export default function ArticleList({ articles, showCardFooter, showCardDescription }) {
+export default function ArticleList({ articles, showCardFooter, showCardDescription, showCardExtract }) {
 
     const articlesByYear = groupBy(articles, (article) => {
         const year = article.frontmatter.date.year;
@@ -30,6 +30,7 @@ export default function ArticleList({ articles, showCardFooter, showCardDescript
                 <ArticleCardList
                     articles={articlesByYear[year]}
                     showCardDescription={showCardDescription}
+                    showCardExtract={showCardExtract}
                     showCardFooter={showCardFooter} />
                 </section>
     ));

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SimpleTagList from '@/molecules/SimpleTagList';
 import LinkButton from '@/molecules/LinkButton';
 
-export default function ArticleCard({ showDescription = true, showFooter = true, frontmatter: { title, description, date, tags }, slug }) {
+export default function ArticleCard({ showExtract = true, showDescription = true, showFooter = true, frontmatter: { title, description, extract, date, tags }, slug }) {
 
     const primaryTag = tags[0];
 
@@ -31,7 +31,12 @@ export default function ArticleCard({ showDescription = true, showFooter = true,
               </header>
               {showDescription && (
                 <section className="p-4 py-0 pb-3">
-                  <p className="m-0 text-sm mb-2">{description}</p>
+                  <p className="m-0 text-sm font-semibold">{description}</p>
+                </section>
+              )}
+              {showExtract && (
+                <section className="p-4 py-0 pb-3">
+                  <p className="m-0 text-sm mb-2">{extract}</p>
                   <LinkButton href={articleHref} as={articleUrl}>Read more</LinkButton>
                 </section>
               )}
