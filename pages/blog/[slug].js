@@ -3,7 +3,9 @@ import React from "react";
 import Layout from '@/molecules/Layout';
 import Markdown from '@/molecules/Markdown';
 import Seo from '@/molecules/Seo';
+import SimpleTagList from '@/molecules/SimpleTagList';
 
+import getReadingTime from '@/utils/helpers/getReadingTime';
 import getPostFromSlug from '../../utils/posts/getPostFromSlug';
 import getPosts from '../../utils/posts/getPosts';
 import loadPostContent from "../../utils/posts/loadPostContent";
@@ -17,6 +19,8 @@ export default function Blog({ content, frontmatter }) {
     }
   };
 
+  const readingTime = getReadingTime(content);
+
   return (
     <Layout template='article'>
         <Seo title={`${frontmatter.title} | Barney Powell`} />
@@ -25,10 +29,17 @@ export default function Blog({ content, frontmatter }) {
             <h1 className="text-3xl py-6">{frontmatter.title}</h1>
           </header>
           <section className="bg-white mb-px text-center p-2 text-xs font-display">
-            <ul>
+            <ul className="flex justify-center items-center">
               <li>{frontmatter.date.full}</li>
-              {frontmatter.tags.map((tag) => <li>{tag.name}</li>)}
+              <li className='mx-1'>&middot;</li>
+              <li>About {readingTime.roundedMins} mins</li>
             </ul>
+          </section>
+          <section className="bg-white mb-px text-center p-2 text-xs font-display flex justify-center">
+            <SimpleTagList tags={frontmatter.tags} />
+          </section>
+          <section className="p-2 bg-white max-w-none prose">
+            <p className="font-display bg-gray-200 p-2 rounded"><span className="text-sm">{frontmatter.description}</span></p>
           </section>
           <section className="p-4 bg-white prose max-w-none mb-px">
             <Markdown>{content}</Markdown>

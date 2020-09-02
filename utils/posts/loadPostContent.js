@@ -29,6 +29,7 @@ const loadPostContent = (filename) => {
     const frontmatter = {
         title: data.title,
         description: data.description,
+        extract: data.extract,
         tags,
         date,
     };
