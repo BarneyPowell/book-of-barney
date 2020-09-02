@@ -1,6 +1,7 @@
 ---
 title: The Vision & The Chaos
-description: The dream had left him breathless and terrified.
+description: A 1,000 word (ish) short story from a seed sentence. The goal isn't to finish a story, but to start one, and see where it takes you.
+extract: The dream had left him breathless and terrified.
 tags: 1000 Words
 ---
 

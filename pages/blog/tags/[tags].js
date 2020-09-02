@@ -22,6 +22,7 @@ export default function Tags({ tag, posts }) {
             <ArticleList
                 articles={posts}
                 showCardDescription={false}
+                showCardExtract={false}
                 showCardFooter={false} />
           </section>
         </article>
