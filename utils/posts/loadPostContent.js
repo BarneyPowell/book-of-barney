@@ -1,4 +1,4 @@
-import loadPost from './loadPostContent';
+import loadPost from './loadPost';
 
 const loadPostContent = (filename) => {
     return loadPost(filename, { includeContent: true });
