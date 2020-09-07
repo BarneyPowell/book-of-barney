@@ -5,7 +5,7 @@ export default {
         name: "Barney Powell",
         summary: "Engineering Manager with Charlotte Tilbury.",
       },
-      description: "A blog",
+      description: "Barney's personal site and blog",
       siteUrl: "https://barneypowell.com/",
       language: "en-GB",
       social: {
